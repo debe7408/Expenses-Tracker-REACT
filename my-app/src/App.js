@@ -1,4 +1,5 @@
-import Expenses from "./Components/Expenses";
+import React from "react";
+import Expenses from "./Components/Expenses/Expenses";
 function App() {
   const expenses = [
     {
@@ -33,10 +34,18 @@ function App() {
     },
   ];
 
+  // ALTERNATIVE WAY TO WRITE REACT CODE INSTEAD OF JSX
+  // import React from "react";
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Expense Tracker"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
       <h1>EXPENSE TRACKER</h1>
-
       <Expenses items={expenses}></Expenses>
     </div>
   );
